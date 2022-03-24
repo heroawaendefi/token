@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.11+commit.d7f03943"
+		"version": "0.8.13+commit.abaa5c0e"
 	},
 	"language": "Solidity",
 	"output": {
@@ -228,6 +228,19 @@
 					}
 				],
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					}
+				],
+				"name": "addLiquidityFree",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -607,13 +620,6 @@
 			},
 			{
 				"inputs": [],
-				"name": "pause",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
 				"name": "paused",
 				"outputs": [
 					{
@@ -804,13 +810,6 @@
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "unpause",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -832,7 +831,7 @@
 					"details": "Destroys `amount` tokens from `account`, deducting from the caller's allowance. See {ERC20-_burn} and {ERC20-allowance}. Requirements: - the caller must have allowance for ``accounts``'s tokens of at least `amount`."
 				},
 				"constructor": {
-					"details": "Grants `DEFAULT_ADMIN_ROLE`, `MINTER_ROLE` and `PAUSER_ROLE` to the account that deploys the contract. See {ERC20-constructor}."
+					"details": "Set liquidity fee and keeper See {ERC20-constructor}."
 				},
 				"decimals()": {
 					"details": "Returns the number of decimals used to get its user representation. For example, if `decimals` equals `2`, a balance of `505` tokens should be displayed to a user as `5.05` (`505 / 10 ** 2`). Tokens usually opt for a value of 18, imitating the relationship between Ether and Wei. This is the value {ERC20} uses, unless this function is overridden; NOTE: This information is only used for _display_ purposes: it in no way affects any of the arithmetic of the contract, including {IERC20-balanceOf} and {IERC20-transfer}."
@@ -867,9 +866,6 @@
 				"owner()": {
 					"details": "Returns the address of the current owner."
 				},
-				"pause()": {
-					"details": "Pauses all token transfers. See {ERC20Pausable} and {Pausable-_pause}. Requirements: - the caller must have the `PAUSER_ROLE`."
-				},
 				"paused()": {
 					"details": "Returns true if the contract is paused, and false otherwise."
 				},
@@ -899,9 +895,6 @@
 				},
 				"transferOwnership(address)": {
 					"details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
-				},
-				"unpause()": {
-					"details": "Unpauses all token transfers. See {ERC20Pausable} and {Pausable-_unpause}. Requirements: - the caller must have the `PAUSER_ROLE`."
 				}
 			},
 			"version": 1
@@ -1065,11 +1058,11 @@
 			]
 		},
 		"contracts/HatTokenV2.sol": {
-			"keccak256": "0xc2bb0cb455ff20d5ece2d9df0218b5581d6fc8604e54560b4335a75427a41c2f",
+			"keccak256": "0x5c0ba83f9170cf8e31ffdc45878986919025f4031cdcd2e5f3dd259d713d0e74",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://b50bf968701d47f6a233a2d344805bb48339566810a800dad86f821c8dff1fe3",
-				"dweb:/ipfs/QmaEBfKXf3DB2Wfjr2kfXhG866s5ouVkeMEt3ApVMajA2u"
+				"bzz-raw://bb43d3c9073cd604b767bc0fe15ab7b15aaf27238a6faa3ab260cf5f9d0b86bc",
+				"dweb:/ipfs/QmQFiapznw6wmVQgdGRSSDc2hrmkh6a1BpnZvu1yTEuFgR"
 			]
 		}
 	},
